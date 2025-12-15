@@ -1,0 +1,32 @@
+# == Python Environment and Packages ==
+
+# 1. Virtual Environments
+# Ignores the entire virtual environment folder
+.venv/
+env/
+venv/
+
+# 2. Installed Packages/Build files (The "packages" you mentioned)
+# Ignores all dependency directories and built files
+build/
+dist/
+*.egg-info/
+__pycache__/
+
+# 3. Bytecode and Temp Files
+# Ignores all compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# == Secrets and Data ==
+# Ignores the file where you store API keys and other secrets
+.env
+
+# == IDE/Editor Files ==
+# Ignores configuration files for common editors (like PyCharm, VS Code)
+.idea/
+.vscode/
+
+# == Logs and Temporary Data ==
+*.log
