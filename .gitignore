@@ -5,6 +5,7 @@
 .venv/
 env/
 venv/
+dataset/
 
 # 2. Installed Packages/Build files (The "packages" you mentioned)
 # Ignores all dependency directories and built files
