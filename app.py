@@ -13,7 +13,7 @@ app = Flask(__name__)
 model = tf.keras.models.load_model("plant_disease_model.h5")
 
 # Load disease info CSV safely
-disease_df = pd.read_csv("disease_info.csv", encoding='ISO-8859-1')
+disease_df = pd.read_csv("disease_info(1).csv", encoding='ISO-8859-1')
 # Convert to dictionary using index
 disease_info = disease_df.set_index("index").to_dict(orient="index")
 
