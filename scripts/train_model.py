@@ -1,6 +1,10 @@
+import os
 import tensorflow as tf
 
-DATASET_PATH = "dataset/color"
+# Define Paths
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATASET_PATH = os.path.join(BASE_DIR, "dataset", "color")
+MODEL_SAVE_PATH = os.path.join(BASE_DIR, "models", "plant_disease_model.h5")
 
 image_size = (224, 224)
 batch_size = 32
@@ -66,5 +70,5 @@ history = model.fit(
 # -------------------------------
 # 7. Save Model
 # -------------------------------
-model.save("plant_disease_model.h5")
-print("Model saved as plant_disease_model.h5")
+model.save(MODEL_SAVE_PATH)
+print(f"Model saved to {MODEL_SAVE_PATH}")

@@ -3,7 +3,8 @@
 ## Prerequisites
 
 1. Ensure you have Python 3 installed.
-2. Create a virtual environment and install dependencies:
+2.  2. Create a virtual environment and install dependencies:
+       **Note**: We specifically use `tensorflow<2.16` to ensure compatibility with the `.h5` model format (Keras 2), as newer versions (Keras 3) may fail to load older models.
 
 ```bash
 python3 -m venv venv
@@ -151,3 +152,17 @@ If you prefer to build the image locally and push it to a registry (like Docker 
     - Select **"Deploy an existing image from a registry"**.
     - Enter your image URL: `docker.io/YOUR_USERNAME/plant-disease-api:latest`.
     - Click **Next** -> **Create Web Service**.
+
+### Project Structure (Organized)
+
+- `app.py`: Main Flask application entry point.
+- `models/`: Contains the trained model file (`plant_disease_model.h5`).
+- `data/`: Contains the disease info CSV (`disease_info.csv`).
+- `scripts/`: Utility scripts:
+    - `setup_env.sh`: Creates/updates the virtual environment.
+    - `train_model.py`: Training script.
+    - `verify_prediction.py`: Standalone test script.
+- `notebooks/`: For Jupyter notebooks or experiments (`rag_experiment.py`).
+- `tests/`: Test assets (`testimage.jpg`).
+- `requirements.txt`: Python dependencies.
+- `Dockerfile` & `Makefile`: Deployment configuration.

@@ -1,6 +1,7 @@
 flask
-tensorflow
+tensorflow==2.12.0
 pandas
 numpy
 werkzeug
 gunicorn
+h5py

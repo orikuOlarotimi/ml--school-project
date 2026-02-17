@@ -1,6 +1,6 @@
 IMAGE_NAME = plant-disease-api
 # Replace with your actual Docker Hub username or registry URL
-REGISTRY_USER = codepraycode 
+REGISTRY_USER = codepraycode
 TAG = latest
 
 .PHONY: build run push all
